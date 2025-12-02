@@ -1,5 +1,3 @@
-# Project PBO 2025  
-**Aplikasi Simulasi Ujian CBT dengan Navigasi Soal, Penilaian Otomatis, dan Timer Per Soal Berbasis GUI**
 CBT Simple (Java Swing)
 
 Deskripsi
@@ -38,4 +36,12 @@ javac -cp ".;lib/*" *.java
 # run
 java -cp ".;lib/*" Main
 
+password proktor saat ini adalah "PBOAMAN".
 
+MariaDB [cbt_database]> select*from exam_user;
++---------+----------+
+| exam_no | password |
++---------+----------+
+| f1d01   | pw0a3k   |
+| f1d02   | rt92mx   |
+| f1d03   | h1k20s   |

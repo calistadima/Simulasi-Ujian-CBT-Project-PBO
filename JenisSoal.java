@@ -1,4 +1,7 @@
-class JenisSoal {
+import java.util.ArrayList;
+import java.util.List;
+
+public class JenisSoal {
     public int idJenis;
     public String namaJenis;
     public int totalWaktu;

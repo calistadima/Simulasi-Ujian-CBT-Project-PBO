@@ -1,4 +1,4 @@
-class Soal {
+public class Soal {
     public int idSoal;
     public int idJenis;
     public String teksSoal;
@@ -8,8 +8,7 @@ class Soal {
     public String opsiD;
     public char kunci;
 
-    public Soal(int idSoal, int idJenis, String teksSoal, String opsiA, String opsiB, 
-                String opsiC, String opsiD, char kunci) {
+    public Soal(int idSoal, int idJenis, String teksSoal, String opsiA, String opsiB, String opsiC, String opsiD, char kunci) {
         this.idSoal = idSoal;
         this.idJenis = idJenis;
         this.teksSoal = teksSoal;

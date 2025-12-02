@@ -5,7 +5,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SoalDAO extends AbstractDAO {
+/**
+ * DBQuestionLoader sekarang menggunakan AbstractDAO sebagai parent untuk
+ * mengilustrasikan pewarisan pada layer data access.
+ */
+public class DBQuestionLoader extends AbstractDAO implements QuestionLoader {
+
+    @Override
     public List<JenisSoal> loadAll() throws SQLException {
         List<JenisSoal> jenisList = new ArrayList<>();
         Connection conn = null;
@@ -40,17 +46,12 @@ public class SoalDAO extends AbstractDAO {
                             rs.getString("kunci_jawaban").charAt(0)
                     );
                     j.daftarSoal.add(s);
-                        // limit to 5 soal per jenis
-                        if (j.daftarSoal.size() > 5) {
-                            j.daftarSoal = new java.util.ArrayList<>(j.daftarSoal.subList(0, 5));
-                        }
                 }
                 closeQuietly(rs); rs = null;
             }
         } finally {
             closeQuietly(rs);
             closeQuietly(ps);
-            // conn closed by closeQuietly
             closeQuietly(conn);
         }
         return jenisList;
